@@ -1,13 +1,4 @@
-$(document).ready(function(){ 
-	$(".scroll").click(function(event){
-		event.preventDefault();
-		$("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
-		$('.navbar-default a').removeClass('selected');
-		$(this).addClass('selected');
-    	});
-});
-
-/* -- Glow effect -- */
+/* Glow effect */
 
 const blob = document.getElementById("blob");
 
@@ -52,13 +43,19 @@ function turnlight() {
 
 /* Day */
 
-var today = new Date();
-var day = today.getDay();
-var daylist = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+let today = new Date();
+let day = today.getDay();
+let daylist = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
 
 
-var todayHTML = document.getElementById("todayHTML");
+let todayHTML = document.getElementById("todayHTML");
 
 
 todayHTML.innerHTML = "Happy " + daylist[day] + "!";
+
+/* about me text*/
+
+let aboutme = document.getElementById("about-copy");
+
+aboutme.innerHTML = "Welcome to my portfolio! As a motion and graphic designer, I have a passion for creating visually stunning projects that captivate and engage audiences. With skills in web design, I bring a unique perspective to my work that incorporates both form and function. I am excited to share my portfolio with you and showcase my skills and experience in the field.";
 
